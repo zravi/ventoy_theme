@@ -1,0 +1,204 @@
+#version:17
+#lang:en_US.UTF-8
+#themeInputDir:uefi
+#screenWidth:1024
+#screenHeight:768
+#head end
+title-text: ""
+desktop-image: "background.jpg"
+desktop-color: "#000000"
+terminal-font: "Unifont Regular 14"
+terminal-box: "terminal_box_*.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
++ boot_menu {
+	text = "bootx "
+    left = 21%
+    top = 27%
+    width = 50%
+    height = 60%
+    item_font = "Noto Sans CJK SC Regular 12"
+    item_color = "#dddddd"
+    selected_item_color = "#ffffff"
+    item_height = 36
+    item_spacing = 8
+    item_padding = 8
+    icon_width = 26
+    icon_height = 18
+    item_icon_space = 15
+    item_pixmap_style = "item_*.png"
+    selected_item_pixmap_style = "selected_item_*.png"
+    menu_pixmap_style = "menu_*.png"
+    scrollbar_thumb = "scrollbar_thumb_*.png"
+    scrollbar_width = 6
+}
++ label {
+    left = 0
+    top = 97%
+    width = 100%
+    align = "center"
+    id = "__timeout__"
+    color = "#99E53E"
+    font = "Noto Sans CJK SC Regular 12"
+    text = "Booting in %d seconds"
+}
++ label {
+    left = 0
+    top = 94%
+    width = 100%
+    align = "center"
+    #color = "#99E53E"
+	color = "#0096FF"
+    font = "Noto Sans CJK SC Regular 12"
+    text = "Use ↑ and ↓ keys to change selection, Enter to confirm, E to edit the commands before booting or C for a command-line"
+}
+
++ progress_bar {
+  id = "__timeout__"
+  text = "@TIMEOUT_NOTIFICATION_SHORT@"
+  left = 95%
+  width = 48
+  top = 95%
+  height = 48
+  text_color = "#f2f2f2"
+  bar_style = "*"
+  highlight_style = "*"
+}
++ hbox {
+    top = 1055
+    left = 0
+    width = 27%
+    + vbox {
+        + label {text = "AB XY" color = "#cccccc"}
+    }
+}
+
++ hbox {
+    top = 1056
+    left = 1
+    width = 27%
+    + vbox {
+        + label {text = "AB XY" color = "#101010"}
+    }
+}
+
++ hbox {
+    top = 1057
+
+    left = 2
+    width = 27%
+    + vbox {
+        + label {text = "AB XY" color = "#101010"}
+    }
+}
+
+
++ hbox {
+    top = 1058
+    left = 3
+    width = 27%
+    + vbox {
+        + label {text = "AB XY" color = "#101010"}
+    }
+}
+
+
++ hbox {
+    top = 1059
+    left = 4
+    width = 27%
+    + vbox {
+        + label {text = "AB XY" color = "#101010"}
+    }
+}
+
+
+
++ hbox{ 
+    left = 1%
+    left = 0%
+    top = 5%
+    width = 30%
+    + label {text = "@ravi@" color = "red" align = "left"} 
+}
+
+
++ hbox{ 
+    left = 90%
+    top = 30 
+    width = 10%
+    height = 25
+    + label {text = "@ravi@" color = "red" align = "left"} 
+}
+
+
++ hbox{ 
+    left = 90%
+    top = 55 
+    width = 10%
+    height = 25
+    + label {text = "@ravi@" color = "red" align = "left"} 
+}
+
++ hbox {
+    left = 36%
+	top = 90%
+    width = 30%
+    + vbox {
+        + label {text = "[F1]" color = "#ffffff"}
+		+ image {file = "icons/mem.png"}		
+    }
+}
+
++ hbox {
+    left = 41%
+	top = 90%
+    width = 30%
+    + vbox {
+        + label {text = "[F2]" color = "#ffffff"}
+        + image {file = "icons/logout.png"}
+    }
+}
+
++ hbox {
+    left = 46%
+	top = 90%
+    width = 30%
+    + vbox {
+        + label {text = "[F3]" color = "#ffffff"}
+        + image {file = "icons/sort.png"}
+    }
+}	
+
++ hbox {
+    left = 51%
+	top = 90%
+    width = 30%
+    + vbox {
+        + label {text = "[F4]" color = "#ffffff"}
+        + image {file = "icons/hdd.png"}
+    }
+}
+
++ hbox {
+    left = 56%
+    top = 90%
+    width = 30%
+    + vbox {
+        + label {text = "[F5]" color = "#ffffff"}
+        + image {file = "icons/ventoy.png"}
+    }
+}
+
++ hbox {
+    left = 61%
+    top = 90%
+    width = 30%
+    + vbox {
+        + label {text = "[F6]" color = "#ffffff"}
+        + image {file = "icons/txt.png"}
+    }
+}
